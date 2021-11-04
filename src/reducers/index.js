@@ -9,9 +9,9 @@ export const initialState = {
 const reducer = (state = initialState, action) => {
     switch(action.type) {
         case ADD_ITEM_TO_CART:
-            console.log('reducer')
             return {
-                
+                ...state,
+                cart : [...state.cart, action.payload]
             }
         default:
             return state
